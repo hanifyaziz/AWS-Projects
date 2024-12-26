@@ -31,7 +31,7 @@ Both are necessary for this project as the index.html will be displaying the
 page that interact with the user while the assets folder used by the
 page to display images, videos etc.
 
-![alt text](https://github.com/hanifyaziz/AWS-Projects/screenshot/static-website/uploaded-files.PNG?raw=true)
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/uploaded-files.PNG?raw=true)
 
 ### 3. Static Website Hosting on S3
 
@@ -66,13 +66,13 @@ Go to the Object tab, Select both the index file
 and the resources folder, then click Action button and choose Make it Public
 using ACL option. Then click 'Make public'.
 
-![alt text](https://github.com/hanifyaziz/AWS-Projects/screenshot/static-website/make-public.PNG?raw=true)
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/make-public.PNG?raw=true)
 
 2. By defining a bucket policy. Bucket policy provides a more robust and scalable way to manage access permissions. 
 
 Go to the Permission tab, Scroll down to bucket policy, then click Edit button and Generate the policy using the policy generator.
 
-![alt text](https://github.com/hanifyaziz/AWS-Projects/screenshot/static-website/bucket-policy.PNG?raw=true)
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/bucket-policy.PNG?raw=true)
 
 
 ### 5. Success!
