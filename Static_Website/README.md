@@ -31,6 +31,8 @@ Both are necessary for this project as the index.html will be displaying the
 page that interact with the user while the assets folder used by the
 page to display images, videos etc.
 
+![alt text](https://github.com/hanifyaziz/AWS-Projects/screenshot/static-website/uploaded-files.PNG?raw=true)
+
 ### 3. Static Website Hosting on S3
 
 Website hosting means that we store our website's files on a server, to make
@@ -52,7 +54,26 @@ regular website URL that allow people to visit S3 bucket as a website.
 When I first visited the bucket endpoint URL, I saw the error 403 Forbidden and
 the code was AccessDenied. The reason for this error was by default S3 will
 upload all the files into the bucket as private which denied people from viewing
-it
+it.
+
+### 5. Make the files public
+
+There are 2 ways to make the objects go public.
+
+1. By using Make Public in Action. This is to set the permission in at the object level.
+
+Go to the Object tab, Select both the index file
+and the resources folder, then click Action button and choose Make it Public
+using ACL option. Then click 'Make public'.
+
+![alt text](https://github.com/hanifyaziz/AWS-Projects/screenshot/static-website/make-public.PNG?raw=true)
+
+2. By defining a bucket policy. Bucket policy provides a more robust and scalable way to manage access permissions. 
+
+Go to the Permission tab, Scroll down to bucket policy, then click Edit button and Generate the policy using the policy generator.
+
+![alt text](https://github.com/hanifyaziz/AWS-Projects/screenshot/static-website/bucket-policy.PNG?raw=true)
+
 
 ### 5. Success!
 
