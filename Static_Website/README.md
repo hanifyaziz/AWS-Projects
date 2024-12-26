@@ -83,8 +83,6 @@ Go to the Permission tab, Scroll down to bucket policy, then click Edit button a
 
 ### 5. Success!
 
-To resolve this connection error, I go to the Object tab, Select both the index file
-and the resources folder, the click Action button and choose Make it Public
-using ACL option. Then click 'Make public'
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/success.PNG?raw=true)
 
 
