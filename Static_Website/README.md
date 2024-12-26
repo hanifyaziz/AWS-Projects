@@ -19,7 +19,9 @@ is the closest to me.
 
 S3 bucket names are globally unique! This means nobody else in the world can
 use our bucket name unless we delete it. So when creating it, we need to make
-it unique too. We can't use other people bucket name. Just can't
+it unique too. We can't use other people bucket name. Just can't...
+
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/createbucket-success.PNG?raw=true)
 
 ### 2. Upload Website Files to S3
 
@@ -46,6 +48,8 @@ filename.
 An ACL is meant for giving an access to resources. In this project I am going to
 enable it so I can control who can have access my bucket.
 
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/static-site-hosting.PNG?raw=true)
+
 ### 4. Bucket Endpoints
 
 Once static website is enabled, S3 produces a bucket endpoint URL, which is a
@@ -56,9 +60,11 @@ the code was AccessDenied. The reason for this error was by default S3 will
 upload all the files into the bucket as private which denied people from viewing
 it.
 
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/bucket-endpoint.PNG?raw=true)
+
 ### 5. Make the files public
 
-There are 2 ways to make the objects go public.
+There are 2 ways to make the objects go public. I prefer method to because it is easy to mange especially if I have many objects to deal with.
 
 1. By using Make Public in Action. This is to set the permission in at the object level.
 
@@ -68,7 +74,7 @@ using ACL option. Then click 'Make public'.
 
 ![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-website/make-public.PNG?raw=true)
 
-2. By defining a bucket policy. Bucket policy provides a more robust and scalable way to manage access permissions. 
+2. By defining a bucket policy. This is to set the permission in at the bucket level. Bucket policy provides a more robust and scalable way to manage access permissions. 
 
 Go to the Permission tab, Scroll down to bucket policy, then click Edit button and Generate the policy using the policy generator.
 
