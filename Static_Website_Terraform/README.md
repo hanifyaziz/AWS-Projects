@@ -140,7 +140,7 @@ output "website_endpoint" {
 }
 ```
 
-![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/output.PNG?raw=true)
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/output-endpoint.PNG?raw=true)
 
 ## Success!
 
