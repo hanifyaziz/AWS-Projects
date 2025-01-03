@@ -6,7 +6,7 @@ Amazon S3 is an object storage service offered by Amazon Web Services. This serv
 
 ### Prerequisites
 
-1. This project require an index file(index.html) and resources folder(assets) to be hosted in Amazon S3. I have uploaded the files in this repository too.
+1. This project require an index file(**index.html**) and resources folder(**assets**) to be hosted in Amazon S3. I have uploaded the files in this repository too.
 
 2. Terraform need to be install on local machine
 
@@ -42,10 +42,10 @@ resource "aws_s3_bucket" "hanif_webbucket" {
     bucket = "hanif-static-web"
   
 }
+```
 
 ![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/bucket-created.PNG?raw=true)
 
-```
 ### 4. Setting up bucket block policy;
 
 ```
