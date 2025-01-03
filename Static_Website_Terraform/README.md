@@ -10,12 +10,12 @@ Amazon S3 is an object storage service offered by Amazon Web Services. This serv
 
 2. Terraform need to be install on local machine
 
-3. AWS CLI need to be install to setup AWS access key
+3. AWS CLI need to be install to setup AWS access key. Setup the access key with ```aws config``` command from the command prompt.
 
 
 ### 1. Define a provider
 
-I created a separate file to define my provider. In this project it's AWS.
+I created a separate file to define my ```provider.tf```. In this project it's AWS.
 
 ```
 provider "aws" {
@@ -33,7 +33,7 @@ terraform init
 ```
 ### 2. Setup Amazon S3 bucket
 
-To specifically configure my S3 bucket for static website hosting, I've created a main.tf file and defined the necessary attributes.
+To specifically configure my S3 bucket for static website hosting, I've created a ```main.tf``` file and defined the necessary attributes.
 
 ### 3. Creating a bucket;
 
@@ -98,7 +98,7 @@ resource "aws_s3_bucket_website_configuration" "hanif_webbucket" {
 
 }
 ```
-The configuration above will define the index document fro the static website. The config can be found at the bottom under Properties tab.
+The configuration above will define the index document from the static website. The config can be found at the bottom under Properties tab.
 
 ![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/index-document.PNG?raw=true)
 
@@ -128,11 +128,11 @@ Above configuration will add a bucket policy under Permissions tab.
 
 ![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/bucketpolicy.PNG?raw=true)
 
-Initally I don't include depends_on attribute, but I'm keep getting the error. However once I perform terraform apply again. The policy attached just fine. So I'm thinking maybe the first attribute does not finish completely and Terraform try to attached the policy. Adding depends_on works for me.
+Initally I don't include ```depends_on``` attribute, but I'm keep getting the error. However once I perform terraform apply again. The policy attached just fine. So I'm thinking maybe the first attribute does not finish completely and Terraform try to attached the policy. Adding ```depends_on``` works for me.
 
 ### 8. Bucket Endpoints
 
-Finally, I have created the output file to display the bucket endpoint. This will ensure that I get the endpoint url right after the process is completed without loging in to the Management console.
+Finally, I have created the ```output.tf``` file to display the bucket endpoint. This will ensure that I get the endpoint url right after the process is completed without loging into the Management console.
 
 ```
 output "website_endpoint" {
@@ -143,5 +143,7 @@ output "website_endpoint" {
 ![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/output-endpoint.PNG?raw=true)
 
 ## Success!
+
+Copy the website enpoint url to the browser.
 
 ![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/success.PNG?raw=true)
