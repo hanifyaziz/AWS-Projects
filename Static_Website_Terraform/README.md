@@ -2,6 +2,8 @@
 
 ### Overview
 
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/diagram.PNG?raw=true)
+
 Amazon S3 is an object storage service offered by Amazon Web Services. This services offer unlimited storage capacity, highly durable and available. Apart from that we can also host a static website using Amazon S3. In this project I will be using Terraform to deploy a static website in Amazon S3.
 
 ### Prerequisites
