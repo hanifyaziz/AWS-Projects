@@ -126,9 +126,21 @@ depends_on = [aws_s3_bucket_public_access_block.hanif_webbucket]
 ```
 Above configuration will add a bucket policy under Permissions tab.
 
-![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/block-public-access.PNG?raw=true)
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/bucketpolicy.PNG?raw=true)
 
 Initally I don't include depends_on attribute, but I'm keep getting the error. However once I perform terraform apply again. The policy attached just fine. So I'm thinking maybe the first attribute does not finish completely and Terraform try to attached the policy. Adding depends_on works for me.
+
+### 8. Bucket Endpoints
+
+Finally, I have created the output file to display the bucket endpoint. This will ensure that I get the endpoint url right after the process is completed without loging in to the Management console.
+
+```
+output "website_endpoint" {
+  value = aws_s3_bucket_website_configuration.hanif_webbucket.website_endpoint
+}
+```
+
+![alt text](https://github.com/hanifyaziz/AWS-Projects/blob/main/screenshot/static-web-wterraform/output.PNG?raw=true)
 
 ## Success!
 
